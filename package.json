@@ -1,0 +1,25 @@
+{
+  "name": "freecodecamp-api-image-search",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhichengChen/freecodecamp-api-image-search.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZhichengChen/freecodecamp-api-image-search/issues"
+  },
+  "homepage": "https://github.com/ZhichengChen/freecodecamp-api-image-search#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2"
+  }
+}
