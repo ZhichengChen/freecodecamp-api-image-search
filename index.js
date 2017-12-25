@@ -1,6 +1,5 @@
 var express = require('express');
 var app = express();
-var moment = require('moment');
 const cheerio = require('cheerio');
 var latest = [];
 
