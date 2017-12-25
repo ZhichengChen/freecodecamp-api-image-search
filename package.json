@@ -20,6 +20,7 @@
   "homepage": "https://github.com/ZhichengChen/freecodecamp-api-image-search#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "multer": "^1.3.0"
   }
 }

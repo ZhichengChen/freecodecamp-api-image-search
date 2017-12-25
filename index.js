@@ -1,6 +1,9 @@
 var express = require('express');
 var app = express();
 const cheerio = require('cheerio');
+var multer  = require('multer');
+var upload = multer({ dest: 'uploads/' });
+
 var latest = [];
 
 app.get('/api/imagesearch/:word', function(req, res, next) {
@@ -44,6 +47,14 @@ app.get('/api/imagesearch/:word', function(req, res, next) {
 
 app.get('/api/latest/imagesearch/', function(req, res, next) {
     res.json(latest);
+});
+
+app.get('/', function(req, res, next) {
+    res.send('<form method="post" action="/" enctype="multipart/form-data"><input type="file" value="选择文件" name="avatar"/><input type="submit" value="上传" /></form>')
+});
+
+app.post('/', upload.single('avatar'), function (req, res, next) {
+    res.send('<script>alert("文件大小：'+req.file.size+'bite");this.location.href="/";</script>');
 });
 
 app.listen(process.env.PORT || 5000, function(){
